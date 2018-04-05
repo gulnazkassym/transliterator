@@ -1,0 +1,12 @@
+<h1>Enter the text</h1>
+
+<%= form_for :word,:url => {:action => 'create'} do |f| %>
+  <%= f.label :text %>
+  <%= f.text_area :text %><br />
+  <%= f.submit 'Convert' %>
+  <br />
+
+<% end %>
+
+
+
