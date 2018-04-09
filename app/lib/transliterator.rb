@@ -89,7 +89,7 @@ class Transliterator
   def convert
     file_path = "#{Rails.root}/public/uploads/resume/attachment/#{@resume.id}/#{@resume.id}.docx"
     File.open(file_path, 'a+') do |file|
-      file.each_line do |line|
+      file.each_line("\n\n") do |line|
 
         LETTERS.each do |k, v|
           line.gsub!(k, v)

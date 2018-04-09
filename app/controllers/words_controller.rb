@@ -3,11 +3,12 @@ class WordsController < ApplicationController
 
     def index
       @words = Word.all
+      # @word = Word.new
     end
 
-    def show
-      @word = Word.find(params[:id])
-    end
+    # def show
+    #   @word = Word.find(params[:id])
+    # end
 
     def new
       @word = Word.new
@@ -17,7 +18,7 @@ class WordsController < ApplicationController
       @word = Word.new(word_params)
       if @word.save
         # redirect_to :action => 'convert'
-        redirect_to @word
+        redirect_to :action => 'translate'
         # binding.pry
        else
           render 'new'

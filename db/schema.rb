@@ -21,9 +21,9 @@ ActiveRecord::Schema.define(version: 20180405062431) do
   end
 
   create_table "words", force: :cascade do |t|
-    t.string   "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "text"
   end
 
 end

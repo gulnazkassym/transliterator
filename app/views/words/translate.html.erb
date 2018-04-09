@@ -1,12 +1,17 @@
-<h1>Enter the text</h1>
+<h1>Введите ваш текст на кириллице: </h1>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<div ng-app="myApp" ng-controller="myCtrl">
 
 <%= form_for :word,:url => {:action => 'create'} do |f| %>
-  <%= f.label :text %>
-  <%= f.text_area :text %><br />
-  <%= f.submit 'Convert' %>
-  <br />
+  <%= f.text_area :text, data: { 'ng-model' => 'text' }, id: 'input', :rows => 10, style: 'width:80%;' %><br />
 
+  <br />
+    <p ng-bind="convert(text)"></p>
 <% end %>
 
 
+<!--<script src="#{Rails.root}/app/assets/javascripts/script.js"></script>-->
 
+
+</div>

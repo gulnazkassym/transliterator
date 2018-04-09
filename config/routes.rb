@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     end
   end
   #get 'words/translate'
-  # resources :words
+  resources :words
   root "resumes#index"
   get "/views/words/translate", to: "words#translate", as: "translate"
 
