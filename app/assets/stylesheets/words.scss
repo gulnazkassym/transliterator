@@ -3,4 +3,24 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 textarea {
   resize: none;
+  font-size: 16px;
+}
+.convert {
+  font-size: 18px;
+  border: 1px solid bisque;
+  border-radius: 10px;
+  height: 200px;
+  position: absolute;
+  padding: 10px;
+  overflow-y:scroll;
+  width: 57%;
+}
+h2 {
+  font-style: italic;
+  color: cadetblue;
+}
+
+p {
+  margin: 10px;
+  line-break: auto;
 }
