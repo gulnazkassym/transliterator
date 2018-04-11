@@ -1,17 +1,17 @@
-<h1>Введите ваш текст на кириллице: </h1>
+<h2>Введите ваш текст на кириллице: </h2>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-
+<br />
 <div ng-app="myApp" ng-controller="myCtrl">
 
 <%= form_for :word,:url => {:action => 'create'} do |f| %>
   <%= f.text_area :text, data: { 'ng-model' => 'text' }, id: 'input', :rows => 10, style: 'width:80%;' %><br />
 
   <br />
-    <p ng-bind="convert(text)"></p>
+    <h2>Ваш текст на латинице</h2> <br />
+    <div class="latin">
+      <p ng-bind="convert(text)" class="convert"></p>
+    </div>
+
 <% end %>
-
-
-<!--<script src="#{Rails.root}/app/assets/javascripts/script.js"></script>-->
-
 
 </div>
