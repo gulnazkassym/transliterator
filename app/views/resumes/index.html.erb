@@ -1,5 +1,4 @@
 <meta charset="UTF-8">
-<h1>Conversion</h1>
 <% if !flash[:notice].blank? %>
   <div class = "alert alert-info">
     <%= flash[:notice] %>
@@ -8,27 +7,28 @@
 
 <br />
 
-<%= link_to "New File", new_resume_path, class: "btn btn-primary" %>
-<%= link_to "Translate", translate_path, class: "btn btn-primary" %>
+<%= link_to "New File", new_resume_path, class: "btn" %>
+<%= link_to "Real-time converter", translate_path, class: "btn" %>
 <br />
 <br />
 
 <table class = "table table-bordered table-striped">
   <thead>
   <tr>
-    <th>Name</th>
-    <th>Download Link</th>
-    <th> </th>
+    <th style='text-align:center;vertical-align:middle'>Name</th>
+    <th style='text-align:center;vertical-align:middle'>Download Link</th>
+    <th style='text-align:center;vertical-align:middle'>Don't keep my file</th>
   </tr>
   </thead>
 
   <tbody>
+  <h3>Последние загруженные файлы</h3>
   <% @resumes.each do |resume| %>
 
     <tr>
-      <td><%= resume.name %></td>
-      <td><%= link_to "Download document", download_resume_path(resume), data: {turbolinks: false} %></td>
-      <td><%= button_to "Delete",  resume, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{resume.name}?" %></td>
+      <td style='text-align:center;vertical-align:middle'><%= resume.name %></td>
+      <td style='text-align:center;vertical-align:middle'><%= link_to "Download document", download_resume_path(resume), data: {turbolinks: false} %></td>
+      <td style='text-align:center;vertical-align:middle'><%= button_to "Delete",  resume, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{resume.name}?" %></td>
     </tr>
 
   <% end %>
