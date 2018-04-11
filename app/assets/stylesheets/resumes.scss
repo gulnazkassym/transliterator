@@ -2,3 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
+.btn {
+  background-color: #F7F7F7;
+}
+
+.table {
+  border-radius: 10px;
+  width: 80%;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+h3 {
+  color: darkcyan;
+}
+
+
